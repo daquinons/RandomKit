@@ -1,5 +1,5 @@
 # RandomKit
-A Swift Framework to generate and interact with pseudo-random numbers *** Work in progress ***
+A Swift Framework to generate and interact with pseudo-random numbers *** Work in progress, pull requests are welcome! ***
 
 ## Introduction
 
@@ -13,6 +13,7 @@ All the functions are using arc4random(), arc4random_uniform() and drand48(), de
 * Generate a random double number between min and max
 * Pick up a random element from an array
 * Pick up a random element from a dictionary
+* Pick up a random element from a string
 * Shuffle an array
 * Shuffle a dictionary
 
@@ -36,8 +37,14 @@ Function that returns a random element from the generic array parameter. Returns
 ### func elementFrom<Key, Value>(dictionary dictionary: Dictionary<Key, Value>) -> (Key, Value)?
 Function that returns a random tuple which contains a key and a value from the generic dictionary parameter. Returns nil if the dictionary is empty.
 
+## Pick up a random element from a string
+### func elementFrom(string string: String) -> String
+Function that returns a random element (character) of a string.
+
 ## Shuffle an array
-### func shuffleElementsFrom<E>(var array: [E]) -> [E]
+### func shuffleElementsFrom<E>(var array: [E]) -> [E]?
+Function that returns the same array passed as parameter with its members in a random order, or nil if the array is empty.
 
 ## Shuffle a dictionary
 ### func shuffleElementsFrom<Key, Value>(dictionary: Dictionary<Key, Value>) -> Dictionary<Key, Value>?
+Function that returns the same dictionary passed as parameter with its members in a random order, or nil if the dictionary is empty.
