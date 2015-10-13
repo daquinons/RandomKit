@@ -1,5 +1,7 @@
 # RandomKit
-A Swift Framework to generate and interact with pseudo-random numbers *** Work in progress, pull requests are welcome! ***
+A Swift Framework to generate and interact with pseudo-random numbers 
+
+*** Work in progress, pull requests are welcome! ***
 
 ## Introduction
 
