@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6346274F1BC6EC3100D8CFE2 /* RandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6346274E1BC6EC3100D8CFE2 /* RandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		634627571BC6EE8000D8CFE2 /* RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634627561BC6EE8000D8CFE2 /* RandomKit.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6346274B1BC6EC3100D8CFE2 /* RandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6346274E1BC6EC3100D8CFE2 /* RandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomKit.h; sourceTree = "<group>"; };
 		634627501BC6EC3100D8CFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		634627561BC6EE8000D8CFE2 /* RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				6346274E1BC6EC3100D8CFE2 /* RandomKit.h */,
+				634627561BC6EE8000D8CFE2 /* RandomKit.swift */,
 				634627501BC6EC3100D8CFE2 /* Info.plist */,
 			);
 			path = RandomKit;
@@ -90,6 +93,7 @@
 		634627421BC6EC3100D8CFE2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = dlqapps;
 				TargetAttributes = {
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634627571BC6EE8000D8CFE2 /* RandomKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +233,7 @@
 		634627541BC6EC3100D8CFE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -238,12 +244,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dlqapps.RandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		634627551BC6EC3100D8CFE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -276,6 +284,7 @@
 				634627551BC6EC3100D8CFE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
