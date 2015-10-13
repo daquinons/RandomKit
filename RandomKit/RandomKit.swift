@@ -75,12 +75,6 @@ public struct RandomKit {
             }
             
             swap(&array[index], &array[indexToChange])
-            print("Swapped!")
-            print("Index")
-            print(index)
-            print("indexToChange")
-            print(indexToChange)
-            
         }
         
         return array
