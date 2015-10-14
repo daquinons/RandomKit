@@ -6,7 +6,6 @@
 //  Copyright © 2015 dlqapps. All rights reserved.
 //
 
-import Foundation
 import Darwin
 
 public struct RandomKit {
