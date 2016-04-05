@@ -2,8 +2,8 @@
 //  RandomKit.swift
 //  RandomKit
 //
-//  Created by David Lechón Quiñones on 13/10/15.
-//  Copyright © 2015 dlqapps. All rights reserved.
+//  Created by David Quiñones on 13/10/15.
+//  Copyright © 2015 dqapps. All rights reserved.
 //
 
 import Darwin
@@ -61,11 +61,11 @@ public struct RandomKit {
         return character
     }
     
-    public static func shuffleElementsFrom<E>(var array: [E]) -> [E]? {
+    public static func shuffleElementsFrom<E>(array: [E]) -> [E]? {
         guard array.count > 0 else {
             return nil
         }
-        
+        var arrayToChange = array
         for index in (0...array.count-1).reverse() {
             let indexToChange = Int(arc4random_uniform(UInt32(index)))
             
@@ -73,10 +73,10 @@ public struct RandomKit {
                 break
             }
             
-            swap(&array[index], &array[indexToChange])
+            swap(&arrayToChange[index], &arrayToChange[indexToChange])
         }
         
-        return array
+        return arrayToChange
     }
     
     public static func shuffleElementsFrom<Key, Value>(dictionary: Dictionary<Key, Value>) -> Dictionary<Key, Value>? {
