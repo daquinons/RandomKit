@@ -9,7 +9,7 @@
 import Darwin
 
 public struct RandomKit {
-    public static func intBetween(min min: Int, max: Int) -> Int? {
+    public static func intBetween(_ min: Int, and max: Int) -> Int? {
         guard min < max else {
             return nil
         }
@@ -17,7 +17,7 @@ public struct RandomKit {
         return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
     }
     
-    public static func floatBetween(min min: Float, max: Float) -> Float? {
+    public static func floatBetween(_ min: Float, and max: Float) -> Float? {
         guard min < max else {
             return nil
         }
@@ -25,7 +25,7 @@ public struct RandomKit {
         return (Float(arc4random()) / 0xFFFFFFFF) * (max - min) + min
     }
     
-    public static func doubleBetween(min min: Double, max: Double) -> Double? {
+    public static func doubleBetween(_ min: Double, and max: Double) -> Double? {
         guard min < max else {
             return nil
         }
@@ -33,7 +33,7 @@ public struct RandomKit {
         return (drand48() * (max - min)) + min
     }
     
-    public static func elementFrom<E>(array array: [E]) -> E? {
+    public static func elementFrom<E>(array: [E]) -> E? {
         guard array.count > 0 else {
             return nil
         }
@@ -43,7 +43,7 @@ public struct RandomKit {
         return element
     }
     
-    public static func elementFrom<Key, Value>(dictionary dictionary: Dictionary<Key, Value>) -> (Key, Value)? {
+    public static func elementFrom<Key, Value>(dictionary: Dictionary<Key, Value>) -> (Key, Value)? {
         guard dictionary.count > 0 else {
             return nil
         }
@@ -55,8 +55,8 @@ public struct RandomKit {
         return (key, value)
     }
     
-    public static func elementFrom(string string: String) -> String {
-        let character = String(elementFrom(array: Array(string.characters)))
+    public static func elementFrom(string: String) -> String {
+        let character = String(describing: elementFrom(array: Array(string.characters)))
         
         return character
     }
@@ -65,8 +65,9 @@ public struct RandomKit {
         guard array.count > 0 else {
             return nil
         }
+
         var arrayToChange = array
-        for index in (0...array.count-1).reverse() {
+        for index in (0...array.count-1).reversed() {
             let indexToChange = Int(arc4random_uniform(UInt32(index)))
             
             guard index != indexToChange else {
@@ -87,7 +88,7 @@ public struct RandomKit {
         var keys = Array(dictionary.keys)
         var values = Array(dictionary.values)
         
-        for index in (0...dictionary.count-1).reverse() {
+        for index in (0...dictionary.count-1).reversed() {
             let indexToChage = Int(arc4random_uniform(UInt32(index)))
             if index != indexToChage {
                 swap(&keys[index], &keys[indexToChage])
@@ -102,4 +103,5 @@ public struct RandomKit {
         
         return shuffledDictionary
     }
+
 }
